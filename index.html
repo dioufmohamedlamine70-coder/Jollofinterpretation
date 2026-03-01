@@ -4,329 +4,290 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Jollof Interpretation Services | Certified Legal & Medical Interpreters NYC</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet"/>
 <style>
-:root{
-  --g:#1a6b3c;--g2:#2d8a55;--g3:#e8f5ee;
-  --bge:#f7f3ec;--bge2:#ede6d8;--bge3:#d6ccb8;
-  --dk:#1a2418;--md:#4a5e4d;--lt:#8a9e8d;
-  --gld:#c49a2a;--w:#fff;
-  --r:0;
-}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:15px}
-body{font-family:'DM Sans',sans-serif;background:var(--bge);color:var(--dk);overflow-x:hidden;line-height:1.5}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#1c1917}
+a{text-decoration:none}
 
-/* TOPBAR */
-.topbar{background:var(--g);color:#fff;font-size:.72rem;padding:.38rem 4%;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:200}
-.topbar a{color:#90eeb8;text-decoration:none;font-weight:600}
-.topbar-r{display:flex;gap:1.5rem;opacity:.8}
+/* COLORS */
+:root{
+  --teal:#0d9488;--teal2:#14b8a6;--teal3:#ccfbf1;
+  --amber:#d97706;--amber2:#f59e0b;--amber3:#fef3c7;
+  --ink:#1c1917;--gray:#78716c;--lite:#fafaf9;--border:#e7e5e4;
+}
+
+/* TOP BAR */
+.topbar{background:var(--teal);color:#fff;font-size:.72rem;padding:.4rem 4%;display:flex;justify-content:space-between;align-items:center}
+.topbar a{color:#99f6e4;font-weight:700}
+.topbar-r{opacity:.75;font-size:.68rem}
 
 /* NAV */
-nav{background:#fff;border-bottom:1px solid #e0ead8;padding:.7rem 4%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 12px rgba(26,107,60,.06)}
+nav{background:#fff;border-bottom:2px solid var(--teal3);padding:.65rem 4%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:99}
 .logo{display:flex;align-items:center;gap:.7rem}
-.logo-icon{width:36px;height:36px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;flex-shrink:0}
-.logo-text{font-family:'Playfair Display',serif;font-size:1rem;color:var(--g);font-weight:700;line-height:1.2}
-.logo-sub{font-size:.58rem;color:var(--lt);letter-spacing:.1em;text-transform:uppercase}
-nav ul{list-style:none;display:flex;gap:1.5rem;align-items:center}
-nav ul a{text-decoration:none;color:var(--md);font-size:.72rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color .2s}
-nav ul a:hover{color:var(--g)}
-.nav-btn{background:var(--g);color:#fff!important;padding:.4rem 1.1rem;font-weight:600!important;transition:background .2s!important}
-.nav-btn:hover{background:var(--g2)!important}
+.logo-mark{width:36px;height:36px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.logo-name{font-family:'Fraunces',serif;font-size:1rem;color:var(--teal);font-weight:700;line-height:1.2}
+.logo-sub{font-size:.52rem;color:var(--gray);letter-spacing:.07em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;gap:1.4rem;align-items:center}
+nav ul a{color:var(--gray);font-size:.72rem;font-weight:600;transition:color .2s}
+nav ul a:hover{color:var(--teal)}
+.nbtn{background:var(--amber);color:#fff!important;padding:.42rem 1.1rem;border-radius:6px;font-weight:700!important}
+.nbtn:hover{background:var(--amber2)!important}
 
-/* HERO - two column tight */
-.hero{background:var(--g);position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:stretch}
-.hero-left{flex:1.1;padding:4rem 4% 3rem 4%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero-right{flex:.9;background:rgba(255,255,255,.07);border-left:1px solid rgba(255,255,255,.1);padding:2.5rem 3%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero-bg{position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 1px,transparent 44px);pointer-events:none}
-.hero-wm{position:absolute;right:-2%;bottom:-5%;font-size:22rem;opacity:.04;color:#fff;pointer-events:none;user-select:none;font-family:'Playfair Display',serif;line-height:1}
-.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.88);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .85rem;margin-bottom:1.2rem}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4.5rem);color:#fff;line-height:1.06;margin-bottom:1.2rem}
-.hero h1 i{color:#90eeb8;font-style:italic}
-.hero-desc{font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.75);max-width:480px;margin-bottom:1.8rem;border-left:2px solid rgba(255,255,255,.25);padding-left:1rem}
-.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.btn-main{background:#fff;color:var(--g);padding:.72rem 1.8rem;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .25s;white-space:nowrap}
-.btn-main:hover{background:var(--bge)}
-.btn-sec{border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);padding:.72rem 1.5rem;font-size:.74rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .25s;white-space:nowrap}
-.btn-sec:hover{border-color:#fff;color:#fff}
-.hero-tel{font-size:.78rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.5rem}
-.hero-tel a{color:#90eeb8;font-weight:600;text-decoration:none;font-size:.9rem}
+/* HERO - compact, no min-height */
+.hero{background:var(--teal);padding:3.5rem 4% 3rem;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.hero-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;padding:.28rem .8rem;border-radius:100px;margin-bottom:1rem}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4.5vw,4rem);color:#fff;line-height:1.08;margin-bottom:1rem;font-weight:700}
+.hero h1 em{font-style:italic;color:#99f6e4}
+.hero-desc{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.8;max-width:460px;margin-bottom:1.6rem;border-left:2px solid rgba(255,255,255,.3);padding-left:.9rem}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.btn-amber{background:var(--amber2);color:#fff;padding:.7rem 1.7rem;border-radius:8px;font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;display:inline-block}
+.btn-amber:hover{background:var(--amber);color:#fff}
+.btn-wh{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.88);padding:.7rem 1.4rem;border-radius:8px;font-size:.75rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;display:inline-block}
+.btn-wh:hover{background:rgba(255,255,255,.2);color:#fff}
+.hero-tel{font-size:.76rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.45rem}
+.hero-tel a{color:#99f6e4;font-weight:700;font-size:.88rem}
+/* HERO PANEL */
+.hero-panel{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;overflow:hidden}
+.hp-head{background:rgba(255,255,255,.08);padding:.75rem 1.1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.08)}
+.hp-row{display:flex;justify-content:space-between;align-items:center;padding:.58rem 1.1rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.hp-row:last-of-type{border-bottom:none}
+.hp-name{color:rgba(255,255,255,.8);font-size:.74rem;display:flex;align-items:center;gap:.4rem}
+.hp-price{font-size:.66rem;font-weight:700}
+.free-chip{background:rgba(16,185,129,.18);border:1px solid rgba(16,185,129,.35);color:#6ee7b7;font-size:.52rem;padding:.08rem .36rem;border-radius:4px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.hp-langs{padding:.7rem 1.1rem;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:.38rem;flex-wrap:wrap}
+.hp-lang{border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55);font-size:.62rem;padding:.18rem .52rem;border-radius:100px}
 
-/* HERO RIGHT PANEL */
-.panel-title{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.8rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
-.panel-title::before{content:'';flex:1;height:1px;background:rgba(255,255,255,.15)}
-.svc-row{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
-.svc-row:last-of-type{border-bottom:none}
-.svc-row-name{color:rgba(255,255,255,.8);font-size:.78rem;display:flex;align-items:center;gap:.5rem}
-.svc-row-price{font-size:.68rem;color:#90eeb8;font-weight:600}
-.free-chip{background:rgba(144,238,184,.15);border:1px solid rgba(144,238,184,.28);color:#90eeb8;font-size:.54rem;font-weight:700;padding:.1rem .38rem;letter-spacing:.07em;text-transform:uppercase}
-.lang-pills{display:flex;gap:.4rem;margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.1)}
-.lang-pill{border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55);font-size:.64rem;padding:.22rem .6rem}
-
-/* THANK YOU STRIP */
-.ty{background:var(--g2);padding:2.2rem 4%;text-align:center;position:relative;overflow:hidden}
-.ty-label{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
-.ty-label::before,.ty-label::after{content:'';width:30px;height:1px;background:rgba(255,255,255,.22)}
-.ty-stage{height:100px;position:relative;display:flex;align-items:center;justify-content:center}
-.ty-word{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:.6rem;opacity:0;transform:translateY(20px) scale(.94);transition:all .7s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
+/* TY STRIP */
+.ty{background:var(--ink);padding:2.2rem 4%;text-align:center}
+.ty-lbl{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;gap:.55rem}
+.ty-lbl::before,.ty-lbl::after{content:'';width:26px;height:1px;background:rgba(255,255,255,.15)}
+.ty-stage{height:88px;position:relative;display:flex;align-items:center;justify-content:center}
+.ty-word{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:.7rem;opacity:0;transform:translateY(16px);transition:all .6s ease;pointer-events:none}
 .ty-word.active{opacity:1;transform:none;pointer-events:auto}
-.ty-word.exit{opacity:0;transform:translateY(-20px) scale(.94);transition:all .4s ease-in}
+.ty-word.exit{opacity:0;transform:translateY(-16px);transition:all .35s ease-in}
 .ty-word .flag{font-size:1.5rem}
-.ty-word .word{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-style:italic;color:#fff;line-height:1}
-.ty-word .lang{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.3rem;font-family:'DM Sans',sans-serif}
-.ty-word-inner{display:flex;flex-direction:column;align-items:center}
-.ty-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.6);margin-top:.6rem;margin-bottom:.8rem}
-.ty-dots{display:flex;justify-content:center;gap:.45rem}
-.ty-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:all .35s}
-.ty-dot.active{background:#fff;transform:scale(1.35)}
+.ty-word-text{display:flex;flex-direction:column;align-items:flex-start}
+.ty-main{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4.5rem);font-style:italic;color:#fff;line-height:1;font-weight:700}
+.ty-sub-lang{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.15rem}
+.ty-caption{font-family:'Fraunces',serif;font-style:italic;font-size:.9rem;color:rgba(255,255,255,.4);margin:.65rem 0 .75rem}
+.ty-dots{display:flex;justify-content:center;gap:.4rem}
+.ty-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
+.ty-dot.active{background:var(--teal2);transform:scale(1.4)}
 
-/* TRUST BAR */
-.trust{background:var(--bge2);border-bottom:1px solid var(--bge3);padding:.85rem 4%;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--md)}
-.trust-item strong{color:var(--g);font-weight:600}
+/* TRUST */
+.trust{background:var(--amber3);border-top:2px solid #fde68a;border-bottom:2px solid #fde68a;padding:.8rem 4%;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:.45rem;font-size:.73rem;color:#78350f;font-weight:500}
+.ti .ic{width:26px;height:26px;background:#fef9c3;border:1px solid #fde68a;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.8rem}
+.ti strong{color:var(--amber);font-weight:700}
 
 /* TICKER */
-.ticker{background:var(--g);padding:.55rem 0;overflow:hidden}
-.ticker-track{display:flex;gap:2rem;width:max-content;animation:tick 24s linear infinite;white-space:nowrap}
-.ticker-track span{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:500;display:flex;align-items:center;gap:.4rem}
-.ticker-track span::after{content:'◆';font-size:.4rem;opacity:.4}
+.ticker{background:var(--amber2);padding:.52rem 0;overflow:hidden}
+.ticker-tr{display:flex;width:max-content;animation:tick 24s linear infinite;gap:2rem}
+.ticker-tr span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);white-space:nowrap;font-weight:600;display:flex;align-items:center;gap:.4rem}
+.ticker-tr span::after{content:'◆';opacity:.35;font-size:.38rem}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* SECTION WRAPPER */
-.wrap{padding:2.8rem 4%}
-.wrap.alt{background:var(--w)}
-.wrap.dk{background:var(--g);color:#fff}
-.sec-head{margin-bottom:1.8rem}
-.eyebrow{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);font-weight:600;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
-.eyebrow::before{content:'';width:16px;height:1.5px;background:var(--g)}
-.wrap.dk .eyebrow{color:#90eeb8}
-.wrap.dk .eyebrow::before{background:#90eeb8}
-h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.6rem);font-weight:700;line-height:1.12;color:var(--dk)}
-h2 em{font-style:italic;color:var(--g)}
-.wrap.dk h2{color:#fff}
-.wrap.dk h2 em{color:#90eeb8}
-.sec-sub{font-size:.85rem;color:var(--lt);line-height:1.7;margin-top:.4rem}
-
-/* TWO-COL LAYOUT */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
-.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+/* SECTIONS */
+.sec{padding:2.5rem 4%}
+.sec.alt{background:var(--lite)}
+.sec.teal{background:var(--teal3)}
+.sec-lbl{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.4rem;display:flex;align-items:center;gap:.45rem}
+.sec-lbl::before{content:'';width:16px;height:2px;background:var(--teal);border-radius:2px}
+.sec-title{font-family:'Fraunces',serif;font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.14;margin-bottom:.4rem}
+.sec-title em{font-style:italic;color:var(--amber)}
+.sec-note{font-size:.83rem;color:var(--gray);line-height:1.7}
 
 /* ABOUT */
-.about-text p{font-size:.86rem;line-height:1.85;color:var(--md);margin-bottom:.8rem}
-.about-text p strong{color:var(--dk);font-weight:600}
-.cred-box{margin-top:1.2rem;border:1px solid #dcecd5;overflow:hidden}
-.cred-item{display:flex;align-items:center;gap:.7rem;padding:.65rem .9rem;border-bottom:1px solid #dcecd5;font-size:.8rem;color:var(--md);transition:all .25s}
-.cred-item:last-child{border-bottom:none}
-.cred-item:first-child{border-top:2px solid var(--g)}
-.cred-item:hover{background:var(--g3);color:var(--g);padding-left:1.3rem}
-.contractor-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--g);color:#fff;font-size:.64rem;padding:.38rem .9rem;margin-top:1rem;letter-spacing:.08em;text-transform:uppercase}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.stat{padding:1.6rem 1.2rem;border:1px solid #dcecd5;margin:-1px 0 0 -1px;text-align:center;transition:all .25s;position:relative}
-.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--g);transform:scaleX(0);transition:transform .3s}
-.stat:hover::after{transform:scaleX(1)}
-.stat:hover{background:var(--g3)}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--g);line-height:1}
-.stat-lbl{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lt);margin-top:.15rem}
-.pull-quote{grid-column:1/-1;background:var(--g);padding:1.4rem 1.8rem;border-left:3px solid #90eeb8;position:relative;margin-top:-.5rem}
-.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:4rem;color:rgba(255,255,255,.08);position:absolute;top:-.8rem;left:1rem;line-height:1}
-.pull-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.88);line-height:1.6;position:relative;z-index:1}
-.pull-quote cite{font-size:.64rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;font-style:normal;display:block;margin-top:.5rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.about p{font-size:.84rem;color:var(--gray);line-height:1.85;margin-bottom:.7rem}
+.about p strong{color:var(--ink);font-weight:600}
+.clist{margin-top:1.1rem;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.citem{display:flex;align-items:center;gap:.65rem;padding:.62rem .9rem;border-bottom:1px solid var(--border);font-size:.79rem;color:var(--gray);transition:all .22s}
+.citem:last-child{border-bottom:none}
+.citem:first-child{border-top:3px solid var(--teal)}
+.citem:hover{background:var(--teal3);color:var(--teal);padding-left:1.25rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--teal);color:#fff;font-size:.63rem;padding:.38rem .95rem;border-radius:100px;margin-top:.9rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.stat{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.4rem .9rem;text-align:center;border-top:3px solid var(--teal)}
+.stat-n{font-family:'Fraunces',serif;font-size:2.2rem;color:var(--teal);font-weight:700;line-height:1}
+.stat-l{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:.12rem}
+.qcard{grid-column:1/-1;background:var(--ink);border-radius:8px;padding:1.3rem 1.6rem;border-left:4px solid var(--amber2);position:relative}
+.qcard::before{content:'"';font-family:'Fraunces',serif;font-size:3.5rem;color:rgba(255,255,255,.06);position:absolute;top:-.4rem;left:.9rem;line-height:1}
+.qcard p{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:rgba(255,255,255,.82);line-height:1.6;position:relative;z-index:1}
+.qcard cite{font-size:.62rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;font-style:normal;display:block;margin-top:.45rem}
 
-/* FREE HOUR RULES */
-.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-.rule-box{padding:1.3rem}
-.rule-box.wknd{background:var(--g);border-left:4px solid #90eeb8}
-.rule-box.wkdy{background:var(--bge2);border:1px solid var(--bge3);border-left:4px solid var(--g)}
-.rule-tag{font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:.4rem}
-.rule-box.wknd .rule-tag{color:#90eeb8}
-.rule-box.wkdy .rule-tag{color:var(--g)}
-.rule-box.wknd h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;margin-bottom:.45rem}
-.rule-box.wkdy h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--dk);margin-bottom:.45rem}
-.rule-box.wknd p{font-size:.78rem;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:.55rem}
-.rule-box.wkdy p{font-size:.78rem;color:var(--md);line-height:1.6;margin-bottom:.55rem}
-.rule-note{font-size:.72rem;padding:.5rem .7rem}
-.rule-box.wknd .rule-note{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border-left:2px solid rgba(255,255,255,.2)}
-.rule-box.wkdy .rule-note{background:var(--g3);color:var(--md);border-left:2px solid var(--g)}
-.rule-note strong{color:inherit;opacity:.9}
-.after-rule{background:var(--w);border:1px solid var(--bge3);border-left:4px solid var(--gld);padding:.9rem 1.1rem;display:flex;gap:.8rem;align-items:flex-start;margin-bottom:1rem}
-.after-rule-lbl{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gld);font-weight:700;margin-bottom:.25rem}
-.after-rule p{font-size:.78rem;color:var(--md);line-height:1.55}
+/* FREE RULES */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem}
+.rule{border-radius:8px;padding:1.2rem}
+.rule.wknd{background:var(--teal);border-left:4px solid #99f6e4}
+.rule.wkdy{background:#fff;border:1px solid var(--border);border-left:4px solid var(--amber2)}
+.rule-tag{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:.35rem}
+.rule.wknd .rule-tag{color:#99f6e4}
+.rule.wkdy .rule-tag{color:var(--amber)}
+.rule h4{font-family:'Fraunces',serif;font-size:1.1rem;margin-bottom:.38rem;font-weight:700}
+.rule.wknd h4{color:#fff}
+.rule.wkdy h4{color:var(--ink)}
+.rule p{font-size:.77rem;line-height:1.58;margin-bottom:.5rem}
+.rule.wknd p{color:rgba(255,255,255,.72)}
+.rule.wkdy p{color:var(--gray)}
+.rule-note{font-size:.71rem;padding:.45rem .65rem;border-radius:6px}
+.rule.wknd .rule-note{background:rgba(0,0,0,.15);color:rgba(255,255,255,.6)}
+.rule.wkdy .rule-note{background:var(--amber3);color:#78350f}
+.after-rule{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid var(--amber2);border-radius:8px;padding:.85rem 1rem;margin-bottom:.8rem;display:flex;gap:.75rem;align-items:flex-start}
+.ar-lbl{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:.2rem}
+.after-rule p{font-size:.77rem;color:#78350f;line-height:1.52}
 
-/* SVC CARDS */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.svc-card{padding:1.5rem 1.3rem;border:1px solid var(--bge3);background:var(--w);margin:-1px 0 0 -1px;position:relative;overflow:hidden;transition:all .3s}
-.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:var(--g);transition:height .3s}
-.svc-card:hover{background:var(--g);border-color:var(--g)}
-.svc-card:hover .sc-ico{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2)}
-.svc-card:hover .sc-name{color:#fff}
-.svc-card:hover .sc-desc{color:rgba(255,255,255,.72)}
-.svc-card:hover .sc-price{color:#90eeb8}
-.svc-card:hover .sc-pip{background:rgba(255,255,255,.15);color:#90eeb8;border-color:rgba(144,238,184,.3)}
-.sc-pip{position:absolute;top:.5rem;right:.5rem;background:var(--g3);color:var(--g);font-size:.52rem;font-weight:700;padding:.12rem .4rem;letter-spacing:.07em;text-transform:uppercase;border:1px solid #c5e0cc;transition:all .3s}
-.sc-num{position:absolute;top:.6rem;left:.8rem;font-family:'Playfair Display',serif;font-size:1.8rem;color:rgba(26,107,60,.06);font-weight:700;line-height:1;transition:color .3s}
-.svc-card:hover .sc-num{color:rgba(255,255,255,.04)}
-.sc-ico{width:34px;height:34px;background:var(--g3);border:1px solid #c5e0cc;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:.8rem;margin-top:.4rem;position:relative;z-index:1;transition:all .3s}
-.sc-name{font-family:'Playfair Display',serif;font-size:1rem;color:var(--dk);margin-bottom:.3rem;font-weight:700;position:relative;z-index:1;transition:color .3s}
-.sc-desc{font-size:.72rem;line-height:1.6;color:var(--lt);margin-bottom:.5rem;position:relative;z-index:1;transition:color .3s}
-.sc-price{font-size:.64rem;color:var(--g);font-weight:600;position:relative;z-index:1;transition:color .3s;letter-spacing:.03em}
+/* SVC GRID */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-top:.8rem}
+.scard{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.25rem;position:relative;overflow:hidden;transition:box-shadow .2s,transform .2s;border-top:3px solid transparent}
+.scard:hover{box-shadow:0 4px 16px rgba(13,148,136,.12);transform:translateY(-2px);border-top-color:var(--teal)}
+.spip{position:absolute;top:.55rem;right:.55rem;background:var(--teal3);color:var(--teal);font-size:.52rem;font-weight:700;padding:.1rem .38rem;border-radius:100px;border:1px solid #99f6e4;letter-spacing:.06em;text-transform:uppercase}
+.snum{font-family:'Fraunces',serif;font-size:1.5rem;color:rgba(13,148,136,.07);font-weight:700;position:absolute;top:.45rem;left:.75rem;line-height:1}
+.sico{width:32px;height:32px;background:var(--teal3);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;margin-bottom:.65rem;margin-top:.2rem}
+.sname{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.sdesc{font-size:.71rem;color:var(--gray);line-height:1.57;margin-bottom:.4rem}
+.sprice{font-size:.63rem;color:var(--teal);font-weight:700}
 
 /* PRICING */
-.price-layout{display:grid;grid-template-columns:1fr 1.8fr;gap:2.2rem;align-items:start}
-.how-box{border:1px solid #dcecd5;overflow:hidden;margin-top:1.2rem}
-.how-hd{background:var(--g);padding:.6rem 1rem;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:700}
-.how-row{padding:.72rem 1rem;border-bottom:1px solid #dcecd5;font-size:.78rem;color:var(--md);display:flex;gap:.6rem}
+.price-wrap{display:grid;grid-template-columns:1fr 1.85fr;gap:2rem;align-items:start;margin-top:1.3rem}
+.how{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:1rem}
+.how-hd{background:var(--teal);padding:.58rem .95rem;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#fff;font-weight:700}
+.how-row{padding:.68rem .95rem;border-bottom:1px solid var(--border);font-size:.77rem;color:var(--gray);display:flex;gap:.55rem}
 .how-row:last-child{border-bottom:none}
-.how-row b{flex-shrink:0;min-width:48px}
-.how-row.green b{color:var(--g)}
-.how-row.gold b{color:var(--gld)}
-.pay-wrap{margin-top:1rem;background:var(--bge2);border:1px solid var(--bge3);padding:1.1rem;border-left:3px solid var(--g)}
-.pay-lbl{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--g);font-weight:700;margin-bottom:.7rem}
-.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
-.pay-m{background:var(--w);border:1px solid #dcecd5;padding:.5rem .7rem;font-size:.74rem;color:var(--dk);display:flex;align-items:center;gap:.4rem;font-weight:500}
-.pay-m.full{grid-column:1/-1}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.pcard{background:var(--bge);border:1px solid var(--bge3);padding:1.4rem;position:relative;overflow:hidden;transition:all .25s}
-.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.pcard:hover::before{transform:scaleX(1)}
-.pcard:hover{box-shadow:0 4px 20px rgba(26,107,60,.08);transform:translateY(-2px)}
-.pcard.hot{background:var(--g);border-color:var(--g)}
-.pcard.hot::before{transform:scaleX(1);background:#90eeb8}
-.pcard.hot .plbl{color:#90eeb8}
-.pcard.hot .pamt,.pcard.hot .plist li{color:rgba(255,255,255,.85)}
+.how-row b{flex-shrink:0;min-width:44px}
+.how-row.t b{color:var(--teal)}
+.how-row.a b{color:var(--amber)}
+.pay-box{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.9rem;border-top:3px solid var(--amber2)}
+.pay-lbl{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:.65rem}
+.pay-g{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+.pay-p{background:var(--lite);border:1px solid var(--border);border-radius:6px;padding:.48rem .65rem;font-size:.73rem;color:var(--ink);display:flex;align-items:center;gap:.35rem;font-weight:500}
+.pay-p.full{grid-column:1/-1}
+/* PRICE CARDS */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.25rem;transition:all .22s;border-top:3px solid var(--teal)}
+.pcard:hover{box-shadow:0 4px 14px rgba(13,148,136,.1);transform:translateY(-2px)}
+.pcard.hot{background:var(--teal);border-color:var(--teal)}
+.pcard.hot .plbl{color:#99f6e4}
+.pcard.hot .pamt,.pcard.hot .pli{color:rgba(255,255,255,.88)}
 .pcard.hot .pu,.pcard.hot .pn{color:rgba(255,255,255,.55)}
-.pcard.hot hr{border-color:rgba(255,255,255,.1)}
-.pcard.hot .plist li::before{color:#90eeb8}
-.plbl{font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;color:var(--g);margin-bottom:.65rem;font-weight:700}
-.pamt{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--dk);line-height:1}
-.pu{font-size:.68rem;color:var(--lt);margin-bottom:.35rem}
-.pn{font-size:.68rem;color:var(--lt);line-height:1.5;margin-bottom:.7rem}
-hr{border:none;border-top:1px solid rgba(26,107,60,.1);margin:.6rem 0}
+.pcard.hot hr{border-color:rgba(255,255,255,.12)}
+.pcard.hot .pli::before{color:#99f6e4}
+.plbl{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.55rem}
+.pamt{font-family:'Fraunces',serif;font-size:2.3rem;font-weight:700;color:var(--ink);line-height:1}
+.pu{font-size:.66rem;color:var(--gray);margin-bottom:.28rem}
+.pn{font-size:.66rem;color:var(--gray);line-height:1.42;margin-bottom:.62rem}
+hr{border:none;border-top:1px solid var(--border);margin:.55rem 0}
 .plist{list-style:none}
-.plist li{font-size:.72rem;color:var(--md);padding:.25rem 0;display:flex;gap:.4rem;align-items:flex-start}
-.plist li::before{content:'✦';color:var(--g);font-size:.46rem;flex-shrink:0;margin-top:.22rem}
-.wk-wrap{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.wk{padding:1.2rem;border-top:3px solid var(--g)}
-.wk.w{background:var(--g3);border-color:var(--g)}
-.wk.d{background:var(--bge2);border-color:var(--gld)}
-.wk-lbl{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:.6rem}
-.wk.w .wk-lbl{color:var(--g)}
-.wk.d .wk-lbl{color:var(--gld)}
-.wk ul{list-style:none;font-size:.78rem;color:var(--dk);line-height:1.9}
-.cancel{grid-column:1/-1;background:var(--bge2);border:1px solid var(--bge3);border-left:3px solid var(--g);padding:1.2rem;display:flex;gap:1rem;align-items:flex-start}
-.cancel h5{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.3rem}
-.cancel p{font-size:.76rem;color:var(--md);line-height:1.6}
+.pli{font-size:.71rem;color:var(--gray);padding:.22rem 0;display:flex;gap:.38rem;align-items:flex-start}
+.pli::before{content:'✓';color:var(--teal);font-size:.68rem;flex-shrink:0;font-weight:700;margin-top:.08rem}
+.wk-wrap{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.wk{border-radius:8px;padding:1.1rem;border-top:3px solid var(--teal)}
+.wk.w{background:var(--teal3)}
+.wk.d{background:var(--amber3);border-top-color:var(--amber2)}
+.wk-lbl{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:.5rem}
+.wk.w .wk-lbl{color:var(--teal)}
+.wk.d .wk-lbl{color:var(--amber)}
+.wk ul{list-style:none;font-size:.77rem;line-height:1.88;color:var(--ink)}
+.canc{grid-column:1/-1;background:#fff;border:1px solid var(--border);border-radius:8px;border-left:4px solid var(--amber2);padding:1.1rem;display:flex;gap:.85rem;align-items:flex-start}
+.canc h5{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:.25rem;font-weight:700}
+.canc p{font-size:.75rem;color:var(--gray);line-height:1.52}
 
 /* RESOURCES */
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem;margin-top:1.6rem}
-.res-card{background:var(--w);border:1px solid var(--bge3);padding:1.3rem;position:relative;overflow:hidden;transition:all .25s}
-.res-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.res-card:hover::after{transform:scaleX(1)}
-.res-card:hover{border-color:#c5e0cc;box-shadow:0 3px 14px rgba(26,107,60,.07)}
-.res-tag{font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--g);font-weight:700;margin-bottom:.45rem}
-.res-card h3{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--dk);margin-bottom:.3rem;font-weight:700}
-.res-card p{font-size:.72rem;color:var(--lt);line-height:1.58;margin-bottom:.6rem}
-.res-link{font-size:.66rem;color:var(--g);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.3rem;transition:color .2s}
-.res-link:hover{color:var(--g2)}
-.res-link::after{content:'↗'}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-top:1.4rem}
+.rcard{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.15rem;transition:all .22s;border-top:3px solid transparent}
+.rcard:hover{border-top-color:var(--amber2);box-shadow:0 3px 12px rgba(217,119,6,.08);transform:translateY(-2px)}
+.rtag{font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700;background:var(--amber3);padding:.1rem .45rem;border-radius:100px;display:inline-block;margin-bottom:.38rem}
+.rcard h3{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.rcard p{font-size:.7rem;color:var(--gray);line-height:1.56;margin-bottom:.5rem}
+.rlink{font-size:.64rem;color:var(--teal);font-weight:700;display:inline-flex;align-items:center;gap:.28rem;transition:color .2s}
+.rlink:hover{color:var(--amber)}
+.rlink::after{content:'↗'}
 
 /* BOOKING */
-.book-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:2.2rem;align-items:start;margin-top:1.8rem}
-.book-info h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--dk);margin-bottom:.9rem;font-weight:700}
-.book-info p{font-size:.82rem;color:var(--md);line-height:1.75;margin-bottom:1.4rem}
-.contact-row{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.85rem}
-.contact-icon{width:32px;height:32px;background:var(--g3);border:1px solid #c5e0cc;display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0;transition:all .25s}
-.contact-row:hover .contact-icon{background:var(--g);color:#fff;border-color:var(--g)}
-.contact-det strong{display:block;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.1rem}
-.contact-det a,.contact-det span{font-size:.79rem;color:var(--md);text-decoration:none;transition:color .2s}
-.contact-det a:hover{color:var(--g)}
-.policy-note{background:var(--g3);border-left:2px solid var(--g);padding:1rem 1.1rem;margin-top:1rem}
-.policy-note h5{font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:.28rem}
-.policy-note p{font-size:.73rem;color:var(--md);line-height:1.5}
-.form-box{background:var(--w);border:1px solid var(--bge3);padding:1.8rem;position:relative}
-.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g),var(--g2))}
-.form-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--dk);margin-bottom:1.3rem;display:flex;align-items:center;gap:.55rem}
-form{display:flex;flex-direction:column;gap:.75rem}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.fg{display:flex;flex-direction:column;gap:.28rem}
-.fl{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:var(--g);font-weight:700}
-.req{color:#c0392b}
-.fi,.fs,.ft{background:var(--bge);border:1px solid var(--bge3);color:var(--dk);padding:.65rem .8rem;font-family:'DM Sans',sans-serif;font-size:.82rem;outline:none;transition:border-color .25s;width:100%}
-.fi:focus,.fs:focus,.ft:focus{border-color:var(--g);background:#fff}
-.fi::placeholder,.ft::placeholder{color:rgba(138,158,141,.45)}
-.ft{resize:vertical;min-height:90px}
-.fsec{font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lt);padding:.3rem 0;border-bottom:1px solid var(--bge3);margin-bottom:.1rem}
-.fwarn{background:var(--g3);border:1px solid #c5e0cc;color:var(--g);padding:.55rem .8rem;font-size:.73rem;line-height:1.45;display:none}
-.fchk{display:flex;align-items:flex-start;gap:.5rem}
-.fchk input{margin-top:3px;flex-shrink:0;accent-color:var(--g)}
-.fchk label{font-size:.71rem;color:var(--md);cursor:pointer;line-height:1.45}
-.sbtn{background:var(--g);color:#fff;padding:.9rem;font-family:'DM Sans',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .25s;width:100%}
-.sbtn:hover{background:var(--g2)}
-.sbtn span{position:relative;z-index:1}
-.fnote{font-size:.66rem;color:var(--lt);text-align:center;line-height:1.4}
+.book-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:2rem;align-items:start;margin-top:1.3rem}
+.book-info h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:.75rem}
+.book-info p{font-size:.81rem;color:var(--gray);line-height:1.75;margin-bottom:1.1rem}
+.cinfo{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.72rem}
+.cico{width:30px;height:30px;background:var(--teal3);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;transition:all .2s}
+.cinfo:hover .cico{background:var(--teal)}
+.ctxt strong{display:block;font-size:.55rem;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);margin-bottom:.08rem;font-weight:700}
+.ctxt a,.ctxt span{font-size:.78rem;color:var(--gray);transition:color .2s}
+.ctxt a:hover{color:var(--teal)}
+.policy{background:var(--teal3);border-radius:7px;border-left:3px solid var(--teal);padding:.9rem 1rem;margin-top:.9rem}
+.policy h5{font-size:.56rem;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);margin-bottom:.25rem;font-weight:700}
+.policy p{font-size:.72rem;color:var(--gray);line-height:1.48}
+/* FORM */
+.fbox{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.7rem;border-top:4px solid var(--teal)}
+.ftitle{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
+form{display:flex;flex-direction:column;gap:.68rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.68rem}
+.fg{display:flex;flex-direction:column;gap:.25rem}
+.fl{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.req{color:#dc2626}
+.fi,.fs,.ft{background:var(--lite);border:1.5px solid var(--border);color:var(--ink);padding:.62rem .78rem;border-radius:6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.81rem;outline:none;transition:border-color .2s;width:100%}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--teal);background:#fff}
+.fi::placeholder,.ft::placeholder{color:#c7c7c7}
+.ft{resize:vertical;min-height:85px}
+.fsec{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:#a8a29e;padding:.28rem 0;border-bottom:1px solid var(--border);margin-bottom:.05rem}
+.fwarn{background:#f0fdf4;border:1px solid #86efac;border-radius:6px;color:#166534;padding:.5rem .78rem;font-size:.72rem;line-height:1.43;display:none}
+.fchk{display:flex;align-items:flex-start;gap:.45rem}
+.fchk input{margin-top:3px;flex-shrink:0;accent-color:var(--teal);width:13px;height:13px}
+.fchk label{font-size:.7rem;color:var(--gray);cursor:pointer;line-height:1.43}
+.sbtn{background:var(--teal);color:#fff;padding:.88rem;border-radius:7px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.sbtn:hover{background:var(--teal2)}
+.fnote{font-size:.64rem;color:#a8a29e;text-align:center;line-height:1.38}
 
 /* FOOTER */
-footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
-.fg3{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2.2rem;margin-bottom:2rem}
-.flogo{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem}
-.flogo-icon{width:32px;height:32px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff}
-.flogo-name{font-family:'Playfair Display',serif;font-size:.95rem;color:#90eeb8;font-weight:700}
-.fbrand p{font-size:.72rem;color:rgba(255,255,255,.35);line-height:1.7}
-.fbadge{display:inline-block;border:1px solid rgba(144,238,184,.18);color:rgba(144,238,184,.4);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .55rem;margin-top:.6rem}
-.fcol h5{font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;color:#90eeb8;margin-bottom:.9rem;font-weight:700}
+footer{background:var(--ink);padding:2.3rem 4% 1.4rem}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;margin-bottom:1.7rem}
+.flogo{display:flex;align-items:center;gap:.55rem;margin-bottom:.65rem}
+.flogo-ic{width:30px;height:30px;background:var(--teal);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.88rem}
+.flogo-n{font-family:'Fraunces',serif;font-size:.92rem;color:#e7e5e4;font-weight:700}
+.fbrand p{font-size:.7rem;color:#57534e;line-height:1.7}
+.fbadge{display:inline-block;border:1px solid #292524;color:#57534e;font-size:.52rem;letter-spacing:.11em;text-transform:uppercase;padding:.2rem .52rem;border-radius:100px;margin-top:.55rem}
+.fcol h5{font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2);margin-bottom:.8rem;font-weight:700}
 .fcol ul{list-style:none}
-.fcol ul li{margin-bottom:.45rem}
-.fcol ul a{text-decoration:none;color:rgba(255,255,255,.3);font-size:.72rem;transition:color .2s}
-.fcol ul a:hover{color:#90eeb8}
-.fcontact-row{display:flex;align-items:center;gap:.4rem;margin-bottom:.48rem;font-size:.72rem;color:rgba(255,255,255,.3)}
-.fcontact-row a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
-.fcontact-row a:hover{color:#90eeb8}
-.fbot{border-top:1px solid rgba(255,255,255,.06);padding-top:1.2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem}
-.fbot p{font-size:.62rem;color:rgba(255,255,255,.18)}
-
-/* REVEAL */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-.rv.on{opacity:1;transform:none}
-.rl{opacity:0;transform:translateX(-16px);transition:opacity .6s ease,transform .6s ease}
-.rl.on{opacity:1;transform:none}
-.rr{opacity:0;transform:translateX(16px);transition:opacity .6s ease,transform .6s ease}
-.rr.on{opacity:1;transform:none}
+.fcol ul li{margin-bottom:.4rem}
+.fcol ul a{color:#57534e;font-size:.7rem;transition:color .2s}
+.fcol ul a:hover{color:var(--teal2)}
+.frow2{display:flex;align-items:center;gap:.38rem;margin-bottom:.42rem;font-size:.7rem;color:#57534e}
+.frow2 a{color:#57534e;transition:color .2s}
+.frow2 a:hover{color:var(--teal2)}
+.fbot{border-top:1px solid #1c1917;padding-top:1.1rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem}
+.fbot p{font-size:.6rem;color:#292524}
 
 /* RESPONSIVE */
-@media(max-width:960px){
-  .hero{flex-direction:column;min-height:auto}
-  .hero-left{padding:4rem 4% 2rem}
-  .hero-right{border-left:none;border-top:1px solid rgba(255,255,255,.1);padding:1.8rem 4%}
+@media(max-width:920px){
   nav ul{display:none}
-  .two-col,.three-col,.price-layout,.book-layout{grid-template-columns:1fr;gap:1.8rem}
-  .svc-grid,.res-grid{grid-template-columns:1fr 1fr}
-  .pgrid,.rules-grid,.wk-wrap,.fg3{grid-template-columns:1fr}
-  .wk-wrap,.cancel,.wk{grid-column:unset}
+  .hero-grid,.two,.price-wrap,.book-wrap{grid-template-columns:1fr;gap:1.8rem}
+  .sgrid,.rgrid{grid-template-columns:1fr 1fr}
+  .pgrid,.rules,.wk-wrap,.fgrid{grid-template-columns:1fr}
+  .wk-wrap,.canc{grid-column:unset}
   .frow{grid-template-columns:1fr}
+  .hero-panel{display:none}
 }
-@media(max-width:580px){
-  .svc-grid,.res-grid,.pgrid,.stats-grid{grid-template-columns:1fr}
-  .trust{gap:1rem}
-  .topbar-r{display:none}
+@media(max-width:560px){
+  .sgrid,.rgrid,.pgrid,.stats{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
-  <span>🌿 FREE 1st Hour with Appointment · Weekends: Walk-ins Welcome · <a href="tel:+16467503502">(646) 750‑3502</a></span>
-  <div class="topbar-r">
-    <span>NYC & All 50 States</span>
-    <span>French · Wolof · Pulaar</span>
-  </div>
+  <span>🌿 FREE 1-Hour Interpretation with Appointment · Weekends: Walk-ins Welcome · <a href="tel:+16467503502">(646) 750‑3502</a></span>
+  <span class="topbar-r">NYC · French · Wolof · Pulaar</span>
 </div>
 
-<!-- NAV -->
 <nav>
   <div class="logo">
-    <div class="logo-icon">⚖</div>
+    <div class="logo-mark">⚖</div>
     <div>
-      <div class="logo-text">Jollof Interpretation Services</div>
+      <div class="logo-name">Jollof Interpretation Services</div>
       <div class="logo-sub">Certified Court & Medical Interpreters · NYC</div>
     </div>
   </div>
@@ -335,99 +296,88 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#resources">Resources</a></li>
-    <li><a href="#booking" class="nav-btn">Book Now</a></li>
+    <li><a href="#booking" class="nbtn">Book Now</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-wm">⚖</div>
-  <div class="hero-left">
-    <div class="badge">DOJ · DOE · NYC Courts · Independent Contractor</div>
-    <h1><i>Justice Spoken</i><br/>In Your Language</h1>
-    <p class="hero-desc">We are young certified court and medical interpreters helping West African immigrants navigate the American legal, medical, and social systems — in their own language, with dignity.</p>
-    <div class="hero-btns">
-      <a href="#booking" class="btn-main">📅 Book an Appointment</a>
-      <a href="#services" class="btn-sec">View Services</a>
+  <div class="hero-dots"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-pill">DOJ · DOE · NYC Courts · Independent Contractor</div>
+      <h1><em>Justice Spoken</em><br/>In Your Language</h1>
+      <p class="hero-desc">We are young certified court and medical interpreters helping West African immigrants navigate the American legal, medical, and social systems — in their own language, with dignity.</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-amber">📅 Book an Appointment</a>
+        <a href="#services" class="btn-wh">View Services</a>
+      </div>
+      <div class="hero-tel">📞 <a href="tel:+16467503502">(646) 750‑3502</a></div>
     </div>
-    <div class="hero-tel">📞 <a href="tel:+16467503502">(646) 750‑3502</a></div>
-  </div>
-  <div class="hero-right">
-    <div class="panel-title">Services &amp; Rates</div>
-    <div class="svc-row"><span class="svc-row-name">⚖️ Legal Interpretation</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">🏥 Medical Interpretation</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">🎓 Academic / Educational</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">🏠 Housing Interpretation</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">🏛️ Court Interpretation</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">📋 Hearing Prep</span><span class="svc-row-price"><span class="free-chip">Free 1st Hr</span></span></div>
-    <div class="svc-row"><span class="svc-row-name">📝 Document Translation</span><span class="svc-row-price">$50/page</span></div>
-    <div class="svc-row"><span class="svc-row-name">📞 Remote Interpretation</span><span class="svc-row-price">$60/hr</span></div>
-    <div class="svc-row"><span class="svc-row-name">🤝 In-Person</span><span class="svc-row-price">$75/hr</span></div>
-    <div class="lang-pills">
-      <span class="lang-pill">🇫🇷 French</span>
-      <span class="lang-pill">🇸🇳 Wolof</span>
-      <span class="lang-pill">🌍 Pulaar</span>
+    <div class="hero-panel">
+      <div class="hp-head">Services & Rates</div>
+      <div class="hp-row"><span class="hp-name">⚖️ Legal Interpretation</span><span class="hp-price"><span class="free-chip">Free 1st Hr</span></span></div>
+      <div class="hp-row"><span class="hp-name">🏥 Medical Interpretation</span><span class="hp-price"><span class="free-chip">Free 1st Hr</span></span></div>
+      <div class="hp-row"><span class="hp-name">🎓 Academic / Educational</span><span class="hp-price"><span class="free-chip">Free 1st Hr</span></span></div>
+      <div class="hp-row"><span class="hp-name">🏠 Housing Interpretation</span><span class="hp-price"><span class="free-chip">Free 1st Hr</span></span></div>
+      <div class="hp-row"><span class="hp-name">🏛️ Court Interpretation</span><span class="hp-price"><span class="free-chip">Free 1st Hr</span></span></div>
+      <div class="hp-row"><span class="hp-name">📝 Document Translation</span><span class="hp-price" style="color:#99f6e4">$50/page</span></div>
+      <div class="hp-row"><span class="hp-name">📞 Remote Interpretation</span><span class="hp-price" style="color:#99f6e4">$60/hr</span></div>
+      <div class="hp-row"><span class="hp-name">🤝 In-Person</span><span class="hp-price" style="color:#99f6e4">$75/hr</span></div>
+      <div class="hp-langs">
+        <span class="hp-lang">🇫🇷 French</span><span class="hp-lang">🇸🇳 Wolof</span><span class="hp-lang">🌍 Pulaar</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- THANK YOU -->
 <div class="ty">
-  <div class="ty-label">A Message From Our Team</div>
+  <div class="ty-lbl">A Message From Our Team</div>
   <div class="ty-stage">
-    <div class="ty-word active"><span class="flag">🇸🇳</span><div class="ty-word-inner"><span class="word">Jërejëf</span><span class="lang">Wolof</span></div></div>
-    <div class="ty-word"><span class="flag">🇫🇷</span><div class="ty-word-inner"><span class="word">Merci</span><span class="lang">Français</span></div></div>
-    <div class="ty-word"><span class="flag">🇺🇸</span><div class="ty-word-inner"><span class="word">Thank You</span><span class="lang">English</span></div></div>
-    <div class="ty-word"><span class="flag">🌍</span><div class="ty-word-inner"><span class="word">A jaraama</span><span class="lang">Pulaar</span></div></div>
+    <div class="ty-word active"><span class="flag">🇸🇳</span><div class="ty-word-text"><span class="ty-main">Jërejëf</span><span class="ty-sub-lang">Wolof</span></div></div>
+    <div class="ty-word"><span class="flag">🇫🇷</span><div class="ty-word-text"><span class="ty-main">Merci</span><span class="ty-sub-lang">Français</span></div></div>
+    <div class="ty-word"><span class="flag">🇺🇸</span><div class="ty-word-text"><span class="ty-main">Thank You</span><span class="ty-sub-lang">English</span></div></div>
+    <div class="ty-word"><span class="flag">🌍</span><div class="ty-word-text"><span class="ty-main">A jaraama</span><span class="ty-sub-lang">Pulaar</span></div></div>
   </div>
-  <div class="ty-sub">For trusting us to be your voice</div>
-  <div class="ty-dots">
-    <div class="ty-dot active"></div><div class="ty-dot"></div><div class="ty-dot"></div><div class="ty-dot"></div>
-  </div>
+  <div class="ty-caption">For trusting us to be your voice</div>
+  <div class="ty-dots"><div class="ty-dot active"></div><div class="ty-dot"></div><div class="ty-dot"></div><div class="ty-dot"></div></div>
 </div>
 
-<!-- TRUST BAR -->
 <div class="trust">
-  <div class="trust-item"><span>🏛️</span><div><strong>DOJ Certified</strong> · Federal Legal</div></div>
-  <div class="trust-item"><span>🎓</span><div><strong>DOE Certified</strong> · Educational</div></div>
-  <div class="trust-item"><span>⚖️</span><div><strong>NYC Courts</strong> · All Proceedings</div></div>
-  <div class="trust-item"><span>🏥</span><div><strong>Medical Settings</strong> · Hospital & Clinic</div></div>
-  <div class="trust-item"><span>📜</span><div><strong>Independent</strong> · Contractor</div></div>
+  <div class="ti"><div class="ic">🏛️</div><div><strong>DOJ Certified</strong> · Federal Legal</div></div>
+  <div class="ti"><div class="ic">🎓</div><div><strong>DOE Certified</strong> · Educational</div></div>
+  <div class="ti"><div class="ic">⚖️</div><div><strong>NYC Courts</strong> · All Proceedings</div></div>
+  <div class="ti"><div class="ic">🏥</div><div><strong>Medical Settings</strong> · Hospital & Clinic</div></div>
+  <div class="ti"><div class="ic">📜</div><div><strong>Independent</strong> · Contractor</div></div>
 </div>
 
-<!-- TICKER -->
-<div class="ticker"><div class="ticker-track">
+<div class="ticker"><div class="ticker-tr">
   <span>Certified Legal Interpreters</span><span>French · Wolof · Pulaar</span><span>DOJ Certified</span><span>DOE Certified</span><span>NYC Courts</span><span>Medical Interpretation</span><span>Free 1st Hour</span><span>NYC & All 50 States</span><span>Independent Contractor</span>
   <span>Certified Legal Interpreters</span><span>French · Wolof · Pulaar</span><span>DOJ Certified</span><span>DOE Certified</span><span>NYC Courts</span><span>Medical Interpretation</span><span>Free 1st Hour</span><span>NYC & All 50 States</span><span>Independent Contractor</span>
 </div></div>
 
-<!-- ABOUT -->
-<div class="wrap alt" id="about">
-  <div class="two-col">
-    <div class="about-text rl">
-      <div class="sec-head">
-        <div class="eyebrow">Who We Are</div>
-        <h2>Young Certified Professionals,<br/><em>Rooted in Community</em></h2>
-      </div>
+<div class="sec alt" id="about">
+  <div class="two">
+    <div class="about">
+      <div class="sec-lbl">Who We Are</div>
+      <h2 class="sec-title">Young Certified Professionals,<br/><em>Rooted in Community</em></h2>
       <p>Jollof Interpretation Services is an <strong>independent contractor interpretation service</strong> based in New York City. We are young certified court and medical interpreters who understand firsthand the challenges facing African immigrants in the U.S.</p>
       <p>We speak your language — literally and culturally. Our team provides <strong>French, Wolof, and Pulaar</strong> interpretation for West African immigrants navigating American legal, medical, academic, and social systems across NYC and all 50 states.</p>
-      <div class="cred-box">
-        <div class="cred-item">🏛️ &nbsp;U.S. Department of Justice (DOJ)</div>
-        <div class="cred-item">🎓 &nbsp;U.S. Department of Education (DOE)</div>
-        <div class="cred-item">⚖️ &nbsp;New York City Courts — Family, Immigration, Civil</div>
-        <div class="cred-item">🏥 &nbsp;Medical & Clinical Settings — Hospital & Telehealth</div>
-        <div class="cred-item">🤝 &nbsp;Nonprofits & Legal Aid Organizations</div>
+      <div class="clist">
+        <div class="citem">🏛️ &nbsp;U.S. Department of Justice (DOJ)</div>
+        <div class="citem">🎓 &nbsp;U.S. Department of Education (DOE)</div>
+        <div class="citem">⚖️ &nbsp;New York City Courts — Family, Immigration, Civil</div>
+        <div class="citem">🏥 &nbsp;Medical & Clinical Settings — Hospital & Telehealth</div>
+        <div class="citem">🤝 &nbsp;Nonprofits & Legal Aid Organizations</div>
       </div>
-      <div class="contractor-badge">📋 Operating as an Independent Contractor</div>
+      <div class="badge">📋 Operating as an Independent Contractor</div>
     </div>
-    <div class="rr">
-      <div class="stats-grid">
-        <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Languages</div></div>
-        <div class="stat"><div class="stat-num">50</div><div class="stat-lbl">States Served</div></div>
-        <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Certified</div></div>
-        <div class="stat"><div class="stat-num">FREE</div><div class="stat-lbl">1st Hour</div></div>
-        <div class="pull-quote">
+    <div>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Languages</div></div>
+        <div class="stat"><div class="stat-n">50</div><div class="stat-l">States Served</div></div>
+        <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Certified</div></div>
+        <div class="stat"><div class="stat-n">FREE</div><div class="stat-l">1st Hour</div></div>
+        <div class="qcard">
           <p>Every person deserves to be understood — no matter what language they speak or where they come from.</p>
           <cite>— Jollof Interpretation Services</cite>
         </div>
@@ -436,129 +386,128 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
   </div>
 </div>
 
-<!-- SERVICES -->
-<div class="wrap" id="services">
-  <div class="sec-head two-col rv">
-    <div><div class="eyebrow">What We Offer</div><h2>Our <em>Services</em></h2></div>
-    <div class="sec-sub" style="align-self:end">All services include a <strong style="color:var(--g)">free first hour</strong> with a confirmed appointment. After 1 hour, standard rates apply.</div>
+<div class="sec" id="services">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:1rem">
+    <div><div class="sec-lbl">What We Offer</div><h2 class="sec-title">Our <em>Services</em></h2></div>
+    <div class="sec-note">All services include a <strong style="color:var(--teal)">free first hour</strong> with a confirmed appointment. After 1 hour, standard rates apply.</div>
   </div>
-  <div class="rules-grid rv">
-    <div class="rule-box wknd">
+  <div class="rules">
+    <div class="rule wknd">
       <div class="rule-tag">🟢 Weekends — Saturday & Sunday</div>
       <h4>Walk-ins Welcome!</h4>
-      <p>Just call us — no appointment needed on weekends. <strong style="color:#90eeb8">First hour FREE</strong> with a booked appointment. After 1hr, regular rates apply.</p>
+      <p>Just call — no appointment needed. <strong style="color:#ccfbf1">First hour FREE</strong> with appointment. After 1hr, regular rates apply.</p>
       <div class="rule-note">⚠️ Walk-in without appointment = <strong>full rate, no free hour</strong></div>
     </div>
-    <div class="rule-box wkdy">
+    <div class="rule wkdy">
       <div class="rule-tag">📅 Weekdays — Monday to Friday</div>
       <h4>Appointment Required</h4>
-      <p>Book in advance to get your <strong style="color:var(--g)">free first hour</strong>. Without appointment, regular rates apply from minute one.</p>
-      <div class="rule-note">📞 Call or book online to secure your <strong>free hour</strong></div>
+      <p>Book in advance to get your <strong style="color:var(--teal)">free first hour</strong>. Without appointment, regular rates apply from minute one.</p>
+      <div class="rule-note">📞 Call or book online to <strong>secure your free hour</strong></div>
     </div>
   </div>
-  <div class="after-rule rv">
-    <div style="font-size:1.1rem;flex-shrink:0">⏱️</div>
+  <div class="after-rule">
+    <div style="font-size:1.05rem;flex-shrink:0">⏱️</div>
     <div>
-      <div class="after-rule-lbl">After the Free Hour — Rates Apply</div>
-      <p>Once your free hour ends: <strong style="color:var(--g)">$60/hr remote</strong> or <strong style="color:var(--g)">$75/hr in-person</strong>. Billed per hour for time used over the free hour.</p>
+      <div class="ar-lbl">After the Free Hour — Rates Apply</div>
+      <p>Once your free hour ends: <strong>$60/hr remote</strong> or <strong>$75/hr in-person</strong>. You only pay for time used beyond the free first hour.</p>
     </div>
   </div>
-  <div class="svc-grid">
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">01</div><div class="sc-ico">⚖️</div><div class="sc-name">Legal Interpretation</div><div class="sc-desc">Court hearings, immigration proceedings, bond hearings, depositions, attorney-client consultations.</div><div class="sc-price">Free 1st hr (appt) · $60/hr remote · $75/hr in-person</div></div>
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">02</div><div class="sc-ico">🏥</div><div class="sc-name">Medical Interpretation</div><div class="sc-desc">Hospital visits, clinical appointments, telehealth, and mental health sessions for West African patients.</div><div class="sc-price">Free 1st hr (appt) · $60/hr remote · $75/hr in-person</div></div>
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">03</div><div class="sc-ico">🎓</div><div class="sc-name">Academic / Educational</div><div class="sc-desc">Parent-teacher conferences, IEP meetings, school enrollment, and educational consultations.</div><div class="sc-price">Free 1st hr (appt) · $60/hr remote · $75/hr in-person</div></div>
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">04</div><div class="sc-ico">🏠</div><div class="sc-name">Housing Interpretation</div><div class="sc-desc">Lease signings, housing court, NYCHA meetings, landlord disputes, housing agency appointments.</div><div class="sc-price">Free 1st hr (appt) · $60/hr remote · $75/hr in-person</div></div>
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">05</div><div class="sc-ico">🏛️</div><div class="sc-name">Court Interpretation</div><div class="sc-desc">Specialized for NYC courts — family, immigration, civil, criminal, and housing court proceedings.</div><div class="sc-price">Free 1st hr (appt) · $60/hr remote · $75/hr in-person</div></div>
-    <div class="svc-card rv"><div class="sc-pip">Free 1st Hr</div><div class="sc-num">06</div><div class="sc-ico">📋</div><div class="sc-name">Hearing Prep Sessions</div><div class="sc-desc">Prepare for court or immigration hearings. Free 1hr for immigrants. After: $20/20min. Lawyers: $60/20min.</div><div class="sc-price">Free 1st hr · $20/20min · $60/20min lawyers</div></div>
-    <div class="svc-card rv"><div class="sc-num">07</div><div class="sc-ico">📝</div><div class="sc-name">Document Translation</div><div class="sc-desc">Legal documents, medical records, birth certificates, immigration forms, and official correspondence.</div><div class="sc-price">$50/page · $100 minimum · By appointment</div></div>
-    <div class="svc-card rv"><div class="sc-num">08</div><div class="sc-ico">📞</div><div class="sc-name">Remote Interpretation</div><div class="sc-desc">Professional phone or video interpretation 7 days/week by appointment — all 50 states.</div><div class="sc-price">$60/hr after free hour · All 50 states</div></div>
-    <div class="svc-card rv"><div class="sc-num">09</div><div class="sc-ico">🤝</div><div class="sc-name">In-Person Interpretation</div><div class="sc-desc">On-site at courts, hospitals, schools, and offices throughout the NYC metro area.</div><div class="sc-price">$75/hr after free hour · NYC area</div></div>
+  <div class="sgrid">
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">01</div><div class="sico">⚖️</div><div class="sname">Legal Interpretation</div><div class="sdesc">Court hearings, immigration proceedings, bond hearings, depositions, attorney consultations.</div><div class="sprice">Free 1st hr · $60/hr remote · $75/hr in-person</div></div>
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">02</div><div class="sico">🏥</div><div class="sname">Medical Interpretation</div><div class="sdesc">Hospital visits, clinical appointments, telehealth, mental health sessions for West African patients.</div><div class="sprice">Free 1st hr · $60/hr remote · $75/hr in-person</div></div>
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">03</div><div class="sico">🎓</div><div class="sname">Academic / Educational</div><div class="sdesc">Parent-teacher conferences, IEP meetings, school enrollment, educational consultations.</div><div class="sprice">Free 1st hr · $60/hr remote · $75/hr in-person</div></div>
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">04</div><div class="sico">🏠</div><div class="sname">Housing Interpretation</div><div class="sdesc">Lease signings, housing court, NYCHA meetings, landlord disputes, agency appointments.</div><div class="sprice">Free 1st hr · $60/hr remote · $75/hr in-person</div></div>
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">05</div><div class="sico">🏛️</div><div class="sname">Court Interpretation</div><div class="sdesc">NYC courts — family, immigration, civil, criminal, and housing court proceedings.</div><div class="sprice">Free 1st hr · $60/hr remote · $75/hr in-person</div></div>
+    <div class="scard"><div class="spip">Free 1st Hr</div><div class="snum">06</div><div class="sico">📋</div><div class="sname">Hearing Prep Sessions</div><div class="sdesc">Free 1hr for immigrants. After: $20/20min. Lawyers & orgs: $60/20min.</div><div class="sprice">Free 1st hr · $20/20min · $60/20min lawyers</div></div>
+    <div class="scard"><div class="snum">07</div><div class="sico">📝</div><div class="sname">Document Translation</div><div class="sdesc">Legal documents, medical records, birth certificates, immigration forms, correspondence.</div><div class="sprice">$50/page · $100 minimum · By appointment</div></div>
+    <div class="scard"><div class="snum">08</div><div class="sico">📞</div><div class="sname">Remote Interpretation</div><div class="sdesc">Phone or video interpretation 7 days/week by appointment — all 50 states.</div><div class="sprice">$60/hr after free hour · All 50 states</div></div>
+    <div class="scard"><div class="snum">09</div><div class="sico">🤝</div><div class="sname">In-Person Interpretation</div><div class="sdesc">On-site at courts, hospitals, schools, and offices throughout the NYC metro area.</div><div class="sprice">$75/hr after free hour · NYC area</div></div>
   </div>
 </div>
 
-<!-- PRICING -->
-<div class="wrap alt" id="pricing">
-  <div class="sec-head rv"><div class="eyebrow">Transparent Rates</div><h2>Clear, <em>Fair</em> Pricing</h2></div>
-  <div class="price-layout">
-    <div class="rl">
-      <p style="font-size:.84rem;color:var(--md);line-height:1.75">Simple pricing — your first hour is always free with an appointment. After that, you only pay for time used.</p>
-      <div class="how-box">
+<div class="sec alt" id="pricing">
+  <div class="sec-lbl">Transparent Rates</div>
+  <h2 class="sec-title">Clear, <em>Fair</em> Pricing</h2>
+  <div class="price-wrap">
+    <div>
+      <p class="sec-note">First hour always free with appointment. You only pay for extra time used.</p>
+      <div class="how">
         <div class="how-hd">How the Free Hour Works</div>
-        <div class="how-row green"><b>Step 1</b> Book your appointment (call or online)</div>
-        <div class="how-row green"><b>Step 2</b> Your first hour is completely FREE</div>
-        <div class="how-row green"><b>Step 3</b> After 1hr, regular rates apply for extra time</div>
-        <div class="how-row gold"><b>Note</b> Weekend walk-ins without appointment = full rate, no free hour</div>
+        <div class="how-row t"><b>Step 1</b> Book your appointment (call or online)</div>
+        <div class="how-row t"><b>Step 2</b> Your first hour is completely FREE</div>
+        <div class="how-row t"><b>Step 3</b> After 1hr, regular rates apply for extra time</div>
+        <div class="how-row a"><b>Note</b> Weekend walk-ins without appointment = full rate, no free hour</div>
       </div>
-      <div class="pay-wrap">
+      <div class="pay-box">
         <div class="pay-lbl">💳 Accepted Payment Methods</div>
-        <div class="pay-methods">
-          <div class="pay-m">💙 PayPal</div>
-          <div class="pay-m">💜 Venmo</div>
-          <div class="pay-m">💛 Zelle</div>
-          <div class="pay-m">🍎 Apple Cash</div>
-          <div class="pay-m full">💵 Cash <span style="font-size:.68rem;color:var(--lt);margin-left:.3rem">(In-Person assignments only)</span></div>
+        <div class="pay-g">
+          <div class="pay-p">💙 PayPal</div>
+          <div class="pay-p">💜 Venmo</div>
+          <div class="pay-p">💛 Zelle</div>
+          <div class="pay-p">🍎 Apple Cash</div>
+          <div class="pay-p full">💵 Cash <span style="font-size:.68rem;color:var(--gray);margin-left:.25rem">(In-Person only)</span></div>
         </div>
       </div>
     </div>
-    <div class="rr">
+    <div>
       <div class="pgrid">
-        <div class="pcard hot rv">
+        <div class="pcard hot">
           <div class="plbl">Remote Interpretation</div>
           <div class="pamt">$60</div>
           <div class="pu">per hour · after free 1st hour</div>
           <div class="pn">Phone or video · All types · 7 days/week · All 50 states</div>
           <hr/>
           <ul class="plist">
-            <li><strong style="color:#90eeb8">1st hour FREE</strong> with appointment</li>
-            <li>Legal, Medical, Court, Academic, Housing</li>
-            <li>French, Wolof & Pulaar</li>
-            <li>Certified professional interpreter</li>
+            <li class="pli"><strong style="color:#99f6e4">1st hour FREE</strong> with appointment</li>
+            <li class="pli">Legal, Medical, Court, Academic, Housing</li>
+            <li class="pli">French, Wolof & Pulaar</li>
+            <li class="pli">Certified professional interpreter</li>
           </ul>
         </div>
-        <div class="pcard rv">
+        <div class="pcard">
           <div class="plbl">In-Person Interpretation</div>
           <div class="pamt">$75</div>
           <div class="pu">per hour · after free 1st hour</div>
           <div class="pn">On-site · NYC & surrounding · All types</div>
           <hr/>
           <ul class="plist">
-            <li><strong style="color:var(--g)">1st hour FREE</strong> with appointment</li>
-            <li>Courts, hospitals, schools, offices</li>
-            <li>French, Wolof & Pulaar</li>
-            <li>Cash accepted for in-person</li>
+            <li class="pli"><strong style="color:var(--teal)">1st hour FREE</strong> with appointment</li>
+            <li class="pli">Courts, hospitals, schools, offices</li>
+            <li class="pli">French, Wolof & Pulaar</li>
+            <li class="pli">Cash accepted for in-person</li>
           </ul>
         </div>
-        <div class="pcard rv">
+        <div class="pcard">
           <div class="plbl">Document Translation</div>
           <div class="pamt">$50</div>
           <div class="pu">per page · $100 minimum</div>
           <div class="pn">All document types · Turnaround by agreement</div>
           <hr/>
           <ul class="plist">
-            <li>Legal documents & contracts</li>
-            <li>Medical records & certificates</li>
-            <li>Immigration forms & correspondence</li>
+            <li class="pli">Legal documents & contracts</li>
+            <li class="pli">Medical records & certificates</li>
+            <li class="pli">Immigration forms & correspondence</li>
           </ul>
         </div>
-        <div class="pcard rv">
+        <div class="pcard">
           <div class="plbl">Hearing Prep Sessions</div>
           <div class="pamt">FREE</div>
           <div class="pu">first hour · with appointment</div>
           <div class="pn">After 1hr: $20/20min · Lawyers & orgs: $60/20min</div>
           <hr/>
           <ul class="plist">
-            <li>Prepare for court/immigration hearings</li>
-            <li>Review case details & terminology</li>
-            <li>Remote or in-person available</li>
+            <li class="pli">Prepare for court/immigration hearings</li>
+            <li class="pli">Review case details & terminology</li>
+            <li class="pli">Remote or in-person available</li>
           </ul>
         </div>
-        <div class="wk-wrap rv">
+        <div class="wk-wrap">
           <div class="wk w">
             <div class="wk-lbl">🟢 Weekends (Sat & Sun)</div>
             <ul>
               <li>✅ Walk-ins welcome — just call!</li>
               <li>✅ <strong>1st hour FREE</strong> with appointment</li>
-              <li>✅ After 1hr → regular rates apply</li>
+              <li>✅ After 1hr → regular rates</li>
               <li>❌ No appt walk-in = <strong>full rate</strong></li>
             </ul>
           </div>
@@ -567,57 +516,56 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
             <ul>
               <li>📞 Appointment required</li>
               <li>✅ <strong>1st hour FREE</strong> with appointment</li>
-              <li>✅ After 1hr → regular rates apply</li>
+              <li>✅ After 1hr → regular rates</li>
               <li>❌ No appt = <strong>full rate from min 1</strong></li>
             </ul>
           </div>
         </div>
-        <div class="cancel rv">
-          <div style="font-size:1.1rem;flex-shrink:0">⚠️</div>
-          <div><h5>Cancellation Policy</h5><p>Cancellations require at least <strong style="color:var(--g)">48 hours notice</strong>. Late cancellations charged min <strong style="color:var(--g)">2 hours</strong> at applicable rate. No-shows billed in full.</p></div>
+        <div class="canc">
+          <div style="font-size:1rem;flex-shrink:0">⚠️</div>
+          <div><h5>Cancellation Policy</h5><p>Cancellations require at least <strong>48 hours notice</strong>. Late cancellations charged min <strong>2 hours</strong> at applicable rate. No-shows billed in full.</p></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- RESOURCES -->
-<div class="wrap" id="resources">
-  <div class="sec-head rv" style="text-align:center;max-width:520px;margin:0 auto 1.6rem">
-    <div class="eyebrow" style="justify-content:center">Community Directory</div>
-    <h2>Legal & <em>Community</em> Resources</h2>
-    <p class="sec-sub">Trusted resources for African immigrants in New York City and across the United States.</p>
+<div class="sec teal" id="resources">
+  <div style="text-align:center;max-width:480px;margin:0 auto">
+    <div class="sec-lbl" style="justify-content:center">Community Directory</div>
+    <h2 class="sec-title">Legal & <em>Community</em> Resources</h2>
+    <p class="sec-note">Trusted resources for African immigrants in NYC and across the United States.</p>
   </div>
-  <div class="res-grid">
-    <div class="res-card rv"><div class="res-tag">Law Firm</div><h3>Legal Aid Society NYC</h3><p>Free legal services for low-income New Yorkers — immigration, housing, family, and criminal law.</p><a href="https://legalaidnyc.org" target="_blank" class="res-link">legalaidnyc.org</a></div>
-    <div class="res-card rv"><div class="res-tag">Immigration</div><h3>African Communities Together</h3><p>Advocacy and legal services for African immigrants in NYC and beyond.</p><a href="https://africanstogether.org" target="_blank" class="res-link">africanstogether.org</a></div>
-    <div class="res-card rv"><div class="res-tag">Nonprofit</div><h3>International Rescue Committee</h3><p>Resettlement support, legal aid, employment, and health services for immigrants.</p><a href="https://rescue.org" target="_blank" class="res-link">rescue.org</a></div>
-    <div class="res-card rv"><div class="res-tag">Legal Aid</div><h3>CUNY Immigrant Rights Clinic</h3><p>Free immigration legal services through CUNY School of Law for New York residents.</p><a href="https://www.law.cuny.edu/academics/clinics/immigration/" target="_blank" class="res-link">law.cuny.edu</a></div>
-    <div class="res-card rv"><div class="res-tag">Court</div><h3>NYC Immigration Court</h3><p>Official immigration court information, hearing schedules, and resources for NYC respondents.</p><a href="https://www.justice.gov/eoir" target="_blank" class="res-link">justice.gov/eoir</a></div>
-    <div class="res-card rv"><div class="res-tag">Medical</div><h3>NYC Health + Hospitals</h3><p>Affordable care for all New Yorkers regardless of immigration status, with interpreter services.</p><a href="https://www.nychealthandhospitals.org" target="_blank" class="res-link">nychealthandhospitals.org</a></div>
-    <div class="res-card rv"><div class="res-tag">Housing</div><h3>NYC Housing Court Answers</h3><p>Free advice for tenants in NYC housing court, including interpreter access information.</p><a href="https://housingcourtanswers.org" target="_blank" class="res-link">housingcourtanswers.org</a></div>
-    <div class="res-card rv"><div class="res-tag">Education</div><h3>NYC DOE Immigrant Families</h3><p>NYC Dept of Education resources for immigrant families with multilingual support.</p><a href="https://www.schools.nyc.gov/school-life/school-activities/immigrant-resources" target="_blank" class="res-link">schools.nyc.gov</a></div>
-    <div class="res-card rv"><div class="res-tag">Nonprofit</div><h3>Northstar Fund</h3><p>Grassroots fundraising supporting African immigrant community organizations in NYC.</p><a href="https://northstarfund.org" target="_blank" class="res-link">northstarfund.org</a></div>
+  <div class="rgrid">
+    <div class="rcard"><div class="rtag">Law Firm</div><h3>Legal Aid Society NYC</h3><p>Free legal services for low-income New Yorkers — immigration, housing, family, and criminal law.</p><a href="https://legalaidnyc.org" target="_blank" class="rlink">legalaidnyc.org</a></div>
+    <div class="rcard"><div class="rtag">Immigration</div><h3>African Communities Together</h3><p>Advocacy and legal services for African immigrants in NYC and beyond.</p><a href="https://africanstogether.org" target="_blank" class="rlink">africanstogether.org</a></div>
+    <div class="rcard"><div class="rtag">Nonprofit</div><h3>International Rescue Committee</h3><p>Resettlement support, legal aid, employment, and health services for immigrants.</p><a href="https://rescue.org" target="_blank" class="rlink">rescue.org</a></div>
+    <div class="rcard"><div class="rtag">Legal Aid</div><h3>CUNY Immigrant Rights Clinic</h3><p>Free immigration legal services through CUNY School of Law for New York residents.</p><a href="https://www.law.cuny.edu/academics/clinics/immigration/" target="_blank" class="rlink">law.cuny.edu</a></div>
+    <div class="rcard"><div class="rtag">Court</div><h3>NYC Immigration Court</h3><p>Official immigration court information, hearing schedules, and resources for NYC respondents.</p><a href="https://www.justice.gov/eoir" target="_blank" class="rlink">justice.gov/eoir</a></div>
+    <div class="rcard"><div class="rtag">Medical</div><h3>NYC Health + Hospitals</h3><p>Affordable care for all New Yorkers regardless of immigration status, with interpreter services.</p><a href="https://www.nychealthandhospitals.org" target="_blank" class="rlink">nychealthandhospitals.org</a></div>
+    <div class="rcard"><div class="rtag">Housing</div><h3>NYC Housing Court Answers</h3><p>Free advice for tenants in NYC housing court, including interpreter access information.</p><a href="https://housingcourtanswers.org" target="_blank" class="rlink">housingcourtanswers.org</a></div>
+    <div class="rcard"><div class="rtag">Education</div><h3>NYC DOE Immigrant Families</h3><p>NYC Dept of Education resources for immigrant families with multilingual support.</p><a href="https://www.schools.nyc.gov/school-life/school-activities/immigrant-resources" target="_blank" class="rlink">schools.nyc.gov</a></div>
+    <div class="rcard"><div class="rtag">Nonprofit</div><h3>Northstar Fund</h3><p>Grassroots fundraising supporting African immigrant community organizations in NYC.</p><a href="https://northstarfund.org" target="_blank" class="rlink">northstarfund.org</a></div>
   </div>
 </div>
 
-<!-- BOOKING -->
-<div class="wrap alt" id="booking">
-  <div class="sec-head rv"><div class="eyebrow">Schedule a Session</div><h2>Book an <em>Appointment</em></h2></div>
-  <div class="book-layout">
-    <div class="rl">
+<div class="sec" id="booking">
+  <div class="sec-lbl">Schedule a Session</div>
+  <h2 class="sec-title">Book an <em>Appointment</em></h2>
+  <div class="book-wrap">
+    <div>
       <h3>Let's connect in your language</h3>
       <p>Fill out the form and we'll confirm within 24 hours. Phone calls are always welcome!</p>
-      <div class="contact-row"><div class="contact-icon">📞</div><div class="contact-det"><strong>Phone</strong><a href="tel:+16467503502">(646) 750‑3502</a></div></div>
-      <div class="contact-row"><div class="contact-icon">📧</div><div class="contact-det"><strong>Email</strong><a href="mailto:mld92@yahoo.com">mld92@yahoo.com</a></div></div>
-      <div class="contact-row"><div class="contact-icon">📍</div><div class="contact-det"><strong>Location</strong><span>New York, NY · All 50 States</span></div></div>
-      <div class="contact-row"><div class="contact-icon">🌿</div><div class="contact-det"><strong>Free 1st Hour</strong><span>With appointment · All service types</span></div></div>
-      <div class="contact-row"><div class="contact-icon">🌍</div><div class="contact-det"><strong>Languages</strong><span>French · Wolof · Pulaar</span></div></div>
-      <div class="policy-note"><h5>⚠️ Cancellation Policy</h5><p>48-hour notice required. Late cancellations: min 2 hours billed. No-shows billed in full.</p></div>
+      <div class="cinfo"><div class="cico">📞</div><div class="ctxt"><strong>Phone</strong><a href="tel:+16467503502">(646) 750‑3502</a></div></div>
+      <div class="cinfo"><div class="cico">📧</div><div class="ctxt"><strong>Email</strong><a href="mailto:mld92@yahoo.com">mld92@yahoo.com</a></div></div>
+      <div class="cinfo"><div class="cico">📍</div><div class="ctxt"><strong>Location</strong><span>New York, NY · All 50 States</span></div></div>
+      <div class="cinfo"><div class="cico">🌿</div><div class="ctxt"><strong>Free 1st Hour</strong><span>With appointment · All service types</span></div></div>
+      <div class="cinfo"><div class="cico">🌍</div><div class="ctxt"><strong>Languages</strong><span>French · Wolof · Pulaar</span></div></div>
+      <div class="policy"><h5>⚠️ Cancellation Policy</h5><p>48-hour notice required. Late cancellations: min 2 hours billed. No-shows billed in full.</p></div>
     </div>
-    <div class="form-box rr">
-      <div class="form-title">📋 Appointment Request</div>
-      <form id="bookForm" onsubmit="submit(event)">
+    <div class="fbox">
+      <div class="ftitle">📋 Appointment Request</div>
+      <form id="bForm" onsubmit="sendForm(event)">
         <div class="fsec">Your Information</div>
         <div class="frow">
           <div class="fg"><label class="fl">First Name <span class="req">*</span></label><input class="fi" type="text" id="fn" placeholder="First name" required/></div>
@@ -643,7 +591,8 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
               <option>Legal Interpretation</option><option>Medical Interpretation</option>
               <option>Academic / Educational</option><option>Housing Interpretation</option>
               <option>Court Interpretation</option><option>Hearing Prep Session</option>
-              <option>Document Translation ($50/page)</option><option>Remote Interpretation ($60/hr)</option>
+              <option>Document Translation ($50/page)</option>
+              <option>Remote Interpretation ($60/hr)</option>
               <option>In-Person Interpretation ($75/hr)</option>
             </select>
           </div>
@@ -655,37 +604,32 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
             </select>
           </div>
         </div>
-        <div class="fwarn" id="fw">🌿 Free 1st hour applies with a confirmed appointment. Weekend walk-ins without appointment are charged at full rate.</div>
+        <div class="fwarn" id="fw">🌿 Free 1st hour applies with a confirmed appointment. Walk-ins without appointment are billed at full rate.</div>
         <div class="frow">
           <div class="fg"><label class="fl">Preferred Date <span class="req">*</span></label><input class="fi" type="date" id="dt" required/></div>
           <div class="fg"><label class="fl">Preferred Time <span class="req">*</span></label><input class="fi" type="time" id="tm" required/></div>
         </div>
         <div class="frow">
-          <div class="fg"><label class="fl">Mode</label>
-            <select class="fs" id="md">
-              <option>Phone</option><option>Video / Remote</option><option>In-Person</option>
-            </select>
-          </div>
+          <div class="fg"><label class="fl">Mode</label><select class="fs" id="md"><option>Phone</option><option>Video / Remote</option><option>In-Person</option></select></div>
           <div class="fg"><label class="fl">Case / Reference #</label><input class="fi" type="text" id="cn" placeholder="Court case #, record #..."/></div>
         </div>
         <div class="fg"><label class="fl">Institution / Court / Agency</label><input class="fi" type="text" id="inst" placeholder="e.g. NYC Family Court, Bellevue Hospital..."/></div>
-        <div class="fg"><label class="fl">Description of Your Needs <span class="req">*</span></label><textarea class="ft" id="ds" placeholder="Please describe your situation and what interpretation support you need." required></textarea></div>
+        <div class="fg"><label class="fl">Description of Your Needs <span class="req">*</span></label><textarea class="ft" id="ds" placeholder="Describe your situation and what interpretation support you need." required></textarea></div>
         <div class="fsec">Agreements</div>
         <div class="fchk"><input type="checkbox" id="c1" required/><label for="c1">I understand cancellations require at least <strong>48 hours notice</strong>, or minimum 2 hours will be billed. <span class="req">*</span></label></div>
         <div class="fchk"><input type="checkbox" id="c2"/><label for="c2">I understand the free 1st hour applies only with a confirmed appointment. Walk-ins without appointment are billed at full rate.</label></div>
         <div class="fchk"><input type="checkbox" id="c3" required/><label for="c3">I will wait for confirmation before assuming my session is booked. <span class="req">*</span></label></div>
         <button type="submit" class="sbtn"><span id="btnTxt">📧 Send Appointment Request</span></button>
-        <p class="fnote">Your request opens your email app pre-filled with all details. We confirm within 24 hours.</p>
+        <p class="fnote">Your request opens your email app pre-filled. We confirm within 24 hours.</p>
       </form>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="fg3">
+  <div class="fgrid">
     <div class="fbrand">
-      <div class="flogo"><div class="flogo-icon">⚖</div><div class="flogo-name">Jollof Interpretation Services</div></div>
+      <div class="flogo"><div class="flogo-ic">⚖</div><div class="flogo-n">Jollof Interpretation Services</div></div>
       <p>Certified court and medical interpreters helping West African immigrants navigate the American legal, medical, and social systems — in their language, with dignity.</p>
       <div class="fbadge">Independent Contractor · NYC</div>
     </div>
@@ -711,11 +655,11 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
     </div>
     <div class="fcol">
       <h5>Contact</h5>
-      <div class="fcontact-row">📞 <a href="tel:+16467503502">(646) 750‑3502</a></div>
-      <div class="fcontact-row">📧 <a href="mailto:mld92@yahoo.com">mld92@yahoo.com</a></div>
-      <div class="fcontact-row">📍 New York, NY · All 50 States</div>
-      <div class="fcontact-row">🇫🇷 French · 🇸🇳 Wolof · 🌍 Pulaar</div>
-      <div class="fcontact-row" style="margin-top:.5rem;flex-wrap:wrap;font-size:.66rem;opacity:.7">💙 PayPal · 💜 Venmo · 💛 Zelle · 🍎 AppleCash · 💵 Cash</div>
+      <div class="frow2">📞 <a href="tel:+16467503502">(646) 750‑3502</a></div>
+      <div class="frow2">📧 <a href="mailto:mld92@yahoo.com">mld92@yahoo.com</a></div>
+      <div class="frow2">📍 New York, NY · All 50 States</div>
+      <div class="frow2">🇫🇷 French · 🇸🇳 Wolof · 🌍 Pulaar</div>
+      <div class="frow2" style="flex-wrap:wrap;font-size:.65rem;opacity:.65;margin-top:.35rem">💙 PayPal · 💜 Venmo · 💛 Zelle · 🍎 AppleCash · 💵 Cash</div>
     </div>
   </div>
   <div class="fbot">
@@ -725,42 +669,21 @@ footer{background:var(--dk);padding:2.5rem 4% 1.5rem}
 </footer>
 
 <script>
-// NAV scroll - sticky already via CSS, just add shadow class
-window.addEventListener('scroll',()=>{});
-// Reveal on scroll
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:0.07});
-document.querySelectorAll('.rv,.rl,.rr').forEach(el=>obs.observe(el));
-// Date min
 document.getElementById('dt').min=new Date().toISOString().split('T')[0];
-// Form submit
-function submit(e){
+function sendForm(e){
   e.preventDefault();
   const g=id=>document.getElementById(id).value;
-  const svc=g('sv'),sub=encodeURIComponent('Appointment Request - '+g('fn')+' '+g('ln')+' - '+svc);
-  const body=encodeURIComponent(
-    'APPOINTMENT REQUEST — JOLLOF INTERPRETATION SERVICES\n'+'─'.repeat(46)+
-    '\nName: '+g('fn')+' '+g('ln')+'\nEmail: '+g('em')+'\nPhone: '+g('ph')+'\nClient Type: '+g('ct')+
-    '\n\nService: '+svc+'\nLanguage: '+g('lg')+'\nDate: '+g('dt')+'\nTime: '+g('tm')+
-    '\nMode: '+g('md')+'\nCase #: '+(g('cn')||'N/A')+'\nInstitution: '+(g('inst')||'N/A')+
-    '\n\nDESCRIPTION\n'+g('ds')+
-    '\n\nAGREEMENTS\n[x] 48hr cancellation policy agreed\n[x] Free hour policy understood\n[x] Awaiting confirmation before assuming booked\n'+'─'.repeat(46)+
-    '\nSent via jollofinterpretation.com'
-  );
+  const svc=g('sv');
+  const sub=encodeURIComponent('Appointment Request - '+g('fn')+' '+g('ln')+' - '+svc);
+  const body=encodeURIComponent('APPOINTMENT REQUEST — JOLLOF INTERPRETATION SERVICES\n'+'─'.repeat(46)+'\nName: '+g('fn')+' '+g('ln')+'\nEmail: '+g('em')+'\nPhone: '+g('ph')+'\nClient Type: '+g('ct')+'\n\nService: '+svc+'\nLanguage: '+g('lg')+'\nDate: '+g('dt')+'\nTime: '+g('tm')+'\nMode: '+g('md')+'\nCase #: '+(g('cn')||'N/A')+'\nInstitution: '+(g('inst')||'N/A')+'\n\nDESCRIPTION\n'+g('ds')+'\n\nAGREEMENTS\n[x] 48hr cancellation policy agreed\n[x] Free hour policy understood\n[x] Awaiting confirmation before assuming booked\n'+'─'.repeat(46)+'\nSent via jollofinterpretation.com');
   window.location.href='mailto:mld92@yahoo.com?subject='+sub+'&body='+body;
-  const btn=document.getElementById('btnTxt');
-  btn.textContent='✅ Email Opened — Please Send!';
-  setTimeout(()=>btn.textContent='📧 Send Appointment Request',5000);
+  document.getElementById('btnTxt').textContent='✅ Email Opened — Please Send!';
+  setTimeout(()=>document.getElementById('btnTxt').textContent='📧 Send Appointment Request',5000);
 }
-// Thank you animation
 (function(){
   const ws=document.querySelectorAll('.ty-word'),ds=document.querySelectorAll('.ty-dot');
   let cur=0,t;
-  function go(i){
-    ws[cur].classList.remove('active');ws[cur].classList.add('exit');
-    ds[cur].classList.remove('active');
-    const p=cur;
-    setTimeout(()=>{ws[p].classList.remove('exit');cur=i;ws[i].classList.add('active');ds[i].classList.add('active')},420);
-  }
+  function go(i){ws[cur].classList.remove('active');ws[cur].classList.add('exit');ds[cur].classList.remove('active');const p=cur;setTimeout(()=>{ws[p].classList.remove('exit');cur=i;ws[i].classList.add('active');ds[i].classList.add('active')},380);}
   ds.forEach((d,i)=>d.addEventListener('click',()=>{clearInterval(t);if(i!==cur)go(i);t=setInterval(()=>go((cur+1)%ws.length),3000)}));
   t=setInterval(()=>go((cur+1)%ws.length),3000);
 })();
